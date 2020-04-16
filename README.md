@@ -32,7 +32,7 @@ List of contents
 	We should list all the files of this application at here with short descriptions
 
 	List of diles:
-	READ.md			this file.
+	README.md			this file.
 	screen.c		contains screen manipulations functions
 	screen.h		contains constant definitions and function 
 					declarations at screen.c 
