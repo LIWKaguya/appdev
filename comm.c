@@ -5,7 +5,7 @@
 // if we are interested in 
 // number of bpeaks
 // maximum decibel value 
-// 
+// put those in a php url and store there
 void sendpost(char *url, char *post)
 {
 	CURL *curl; 
