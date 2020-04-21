@@ -2,6 +2,10 @@
 #include <i386-linux-gnu/curl/curl.h>
 #include "comm.h"
 
+// if we are interested in 
+// number of bpeaks
+// maximum decibel value 
+// 
 void sendpost(char *url, char *post)
 {
 	CURL *curl; 

@@ -8,6 +8,12 @@
 
 int main(void)
 {
+	Position p = getscreensize();
+	if ( p.col < BARS )
+	{
+		printf("Your screen size is not wide enough to display :D");
+		return 1; 	
+	}
 	clearscreen();
 	FILE *fp = fopen("test.wav", "r");
 	WAVheader h = readwavhdr(fp);
