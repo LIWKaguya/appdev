@@ -35,7 +35,9 @@ void wavdata(WAVheader h, FILE *fp)
 	// (ROOT MEAN SQUARE) formula 
 	short samples[SIZE];
 	int peaks = 0 , flag = 0 ; 
-	
+//	double array[16]; 
+	int  max = 0 ;
+	//max = array[0];
 	for(int i=0; i < BARS; i++)
 	{
 		fread(samples, sizeof(samples), 1, fp); 
@@ -50,24 +52,37 @@ void wavdata(WAVheader h, FILE *fp)
 		} 
 		//double dB = sqrt(sum/2000);
 		double dB = 20*log10(sqrt(sum/SIZE));
+		if (  dB > max )
+		{
+			max = (int)dB ; 
+		} 
 #ifdef SDEBUG
 		printf("db[%d] = %f\n", i, dB);
 #else
 		if(dB > 70)
 		{
+		/*	for( int j = 1 ; j < 11 ; j++)
+			{
+				dB = array[j]; 
+				if ( array[j] > max )
+				{
+					max = array[j];
+				} 
+			}  */
 			setfgcolor(RED);
 			if( flag == 0)
 			{
-				peaks++;
-				flag==1; 
+				flag = 1;
+				peaks++; 
 			}
+
 		}
 		else
 		{	
 			 setfgcolor(WHITE);
 			 if(flag == 1)
 			{
-				flag == 0 ; 
+				flag = 0 ; 
 			}
 		}
 		drawbar(i+1, (int)dB/3);
@@ -79,7 +94,9 @@ void wavdata(WAVheader h, FILE *fp)
 		printf("Duration: %.3f\n", (double)  h.subchunk2Size / h.byteRate); 
 		gotoXY(1, 150); 
 		setfgcolor(YELLOW); 
-		printf("Peaks: %d\n", 7);
+		printf("Peaks: %d\n", peaks);
+		setfgcolor(BLUE);
+		printf("Maximum value: %d\n", max); 
 #endif
 	}
 }

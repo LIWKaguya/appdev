@@ -10,7 +10,6 @@ int main(void)
 {
 	Position cur = getscreensize();
 	char postdata[1000];
-	sprintf(postdata, "row=%d&col=%d&id=e1900315", cur.row, cur.col);
 	sendpost(URL, postdata);
 	gotoXY(1,1);
 	printf("Screen size: row=%d, col=%d\n", cur.row, cur.col); 
