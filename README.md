@@ -59,7 +59,8 @@ List of contents
 	sound.h			contains constant definitions and function of sound.c
 	main.c 			use to execute sound.c and display figure of decibels as well as 
 					showing the peaks and related information to specific .wav file
-
+	sound.php		This file is to uploading some specific information such as the
+					peaks and the maximum value of the input wav file 
 5. Licenses and  Copyright 
 	This application follows GPLv2 copyright. 
 
