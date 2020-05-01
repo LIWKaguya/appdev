@@ -2,12 +2,11 @@
 #include <i386-linux-gnu/curl/curl.h>
 #include "comm.h"
 
-// if we are interested in 
-// number of bpeaks
+// number of peaks
 // maximum decibel value 
 // put those in a php url and store there
-void sendpost(char *url, char *post)
-{
+void sendpost(char *url, char *post) // so here we is the function that we can send the information that we want to 
+{									// send specific information toward an predetermined URL 
 	CURL *curl; 
 	CURLcode res; 
 

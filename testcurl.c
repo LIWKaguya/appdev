@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <i386-linux-gnu/curl/curl.h>
+#include <i386-linux-gnu/curl/curl.h> // if we want to include path of the specific libaries, we use this way 
 
-#define URL "http://www.cc.puv.fi/~gc/php/raspsound.php"
+#define URL "http://www.cc.puv.fi/~gc/php/raspsound.php" // the URL that we wantt to send 
 
 int main(void)
 {

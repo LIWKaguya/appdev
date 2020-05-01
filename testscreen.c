@@ -10,15 +10,15 @@ int main(void)
 {
 	Position cur = getscreensize();
 	char postdata[1000];
-	sendpost(URL, postdata);
+	sendpost(URL, postdata); // post the specific data that we want 
 	gotoXY(1,1);
-	printf("Screen size: row=%d, col=%d\n", cur.row, cur.col); 
+	printf("Screen size: row=%d, col=%d\n", cur.row, cur.col); // this is to print the row and the column size  
 	printf("Today we will make some animations. Press any key to continue\n");
 	getchar();
 	getchar(); 
 	int ff, bb;
 	float step = (float)cur.col/cur.row;  
-	for(int i=1 ; i<=cur.row ; i++)
+	for(int i=1 ; i<=cur.row ; i++) // this function we want  to set "HELLO" as moving diagonally from left to right 
 	{
 		clearscreen();
 		setfgcolor(RED);
@@ -28,7 +28,7 @@ int main(void)
 		printf("HELLO\n");
 		usleep(500000);  
 	}
-/*	for(int i=1 ; i<21; i++)
+/*	for(int i=1 ; i<21; i++) // here is the 2020 project 1 part but  I commented out 
 	{
 		clearscreen();
 		setfgcolor(RED);
@@ -44,7 +44,7 @@ int main(void)
 	printf("color is set back to default\n");
 	getchar();
 	FILE *fp = fopen("test.wav", "r");
-	WAVheader h = readwavhdr(fp);
+	WAVheader h = readwavhdr(fp); // this last 3 lines just for checking header of the wav file
 	fclose(fp);
 	displaywavhdr(h);  
 /*	setfgcolor(CYAN);

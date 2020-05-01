@@ -1,5 +1,5 @@
 
-// Usually un a header file, following information are included 
+// Usually in a header file, following information are included 
 // 1. function declarations
 // 2. constant definitions 
 // 3. conditional compilation ( will be discussed later)
@@ -17,7 +17,7 @@ typedef struct // this struct will define a compound data, which consists
 {             // the number of rows and the nnumber of columns of our screen 
 	int row;
 	int col; 
-}Position;
+}Position; // structure for the postion as the getscreensize function 
 
 
 // function declarations
