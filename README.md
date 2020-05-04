@@ -40,27 +40,30 @@ List of contents
 	We should list all the files of this application at here with short descriptions
 
 	List of diles:
-	README.md			this file.
-	screen.c		contains screen manipulations functions
-	screen.h		contains constant definitions and function 
-					declarations at screen.c 
-	testcurl.c 		contains the code which can send information to specific
-					php page
-	makefile 		contains the shorter version for the gcc and others command
-					such as rm and tar
-	testscreen.c 	this contains alot of animations and function that we can play and 
-					manipulate it alongside with screen.c 
-	comm.c 			contains code for the posting and responding to a specific 
-					php server or website 
-	comm.h 			contains constant definitions and function declarations
-					at comm.c
-	sound.c			here we take in the .wav files in order to dissect into parts and 
-					take a closer look at where is the peaks, the maximum decibel, .etc
-	sound.h			contains constant definitions and function of sound.c
-	main.c 			use to execute sound.c and display figure of decibels as well as 
-					showing the peaks and related information to specific .wav file
-	sound.php		This file is to uploading some specific information such as the
-					peaks and the maximum value of the input wav file 
+	README.md			
+	*This file.
+	screen.c		
+	*Contains screen manipulations functions
+	screen.h		
+	*Contains constant definitions and function declarations at screen.c 
+	testcurl.c 		
+	*contains the code which can send information to specific php page
+	makefile 		
+	*Contains the shorter version for the gcc and others command such as rm and tar
+	testscreen.c 	
+	*This contains alot of animations and function that we can play and manipulate it alongside with screen.c 
+	comm.c 			
+	*Contains code for the posting and responding to a specific php server or website 
+	comm.h 			
+	*Contains constant definitions and function declarations at comm.c
+	sound.c			
+	*Here we take in the .wav files in order to dissect into parts and take a closer look at where is the peaks, the maximum decibel, .etc
+	sound.h			
+	*Contains constant definitions and function of sound.c
+	main.c 			
+	*Use to execute sound.c and display figure of decibels as well as showing the peaks and related information to specific .wav file
+	sound.php		
+	*This file is to uploading some specific information such as the peaks and the maximum value of the input wav file 
 5. Licenses and  Copyright 
 	This application follows GPLv2 copyright. 
 

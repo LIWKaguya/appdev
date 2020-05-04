@@ -23,6 +23,12 @@ typedef struct
 	int subchunk2Size; // how many bytes exactly for data part
 }WAVheader;
 
+typedef struct
+{
+	int peaks;
+	int max;
+}Sound; 
+
 // function declarations 
 WAVheader readwavhdr(FILE *);
 void displaywavhdr(WAVheader); 

@@ -1,4 +1,4 @@
-In this section we should give users information of how to run this application, e.g., what command-line arguments can be given and what do they mean
+#In this section we should give users information of how to run this application, e.g., what command-line arguments can be given and what do they mean
 OBJ = screen.o main.o comm.o sound.o 
 APPNAME = sound
 

@@ -6,6 +6,8 @@
 #include "comm.h"
 #include "sound.h"
 
+Sound sound; // outside the main ( declare struct ) 
+ 
 int main(void)
 {
 	Position p = getscreensize();  // this function is to get the screen size of the terminal 
@@ -22,11 +24,13 @@ int main(void)
 	displaywavhdr(h);
 	getchar(); 
 	clearscreen(); 
-	wavdata(h, fp);  // display data as column 
+	wavdata(h, fp);  // display data as column
+	//display  
 	getchar();
 	fclose(fp); // close the file 
 	resetcolors(); // reset color to default 
-	sprintf(postdata, "row=%d&col=%d&id=e1900315&peaks=%d&maximum=%lf", p.row, p.col, peaks, max);
+	sprintf(postdata, "ID=e1900315&peaks=%d&max=%d",sound.peaks, sound.max);
+	//printf("%d, %d", sound.peaks, sound.max); // debugging  
 	sendpost(URL, postdata);
 	return 0 ; 
 }

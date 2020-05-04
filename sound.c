@@ -32,7 +32,9 @@ void wavdata(WAVheader h, FILE *fp) // read out the data
 {
 	// For samoke rate 16000sps, we need to  read 2000 samples to calculate
 	// "fast" decibel value. A decibel value is always calculated by RMS
-	// (ROOT MEAN SQUARE) formula 
+	
+	// (ROOT MEAN SQUARE) formula
+	extern Sound sound;  
 	short samples[SIZE];
 	int peaks = 0 , flag = 0 ; // initialize the value of peaks and the flag as 0 
 //	double array[16]; 
@@ -54,7 +56,7 @@ void wavdata(WAVheader h, FILE *fp) // read out the data
 		double dB = 20*log10(sqrt(sum/SIZE));
 		if (  dB > max ) // here is how you can get the maximum value 
 		{
-			max = (int)dB ; 
+			max = (int) dB ; 
 		} 
 #ifdef SDEBUG // if we define the SDEBUG we print out like this way  
 		printf("db[%d] = %f\n", i, dB);
@@ -85,6 +87,8 @@ void wavdata(WAVheader h, FILE *fp) // read out the data
 				flag = 0 ; 
 			}
 		}
+		sound.peaks = peaks; 
+		sound.max = max ; 
 		drawbar(i+1, (int)dB/3); // because we only want the integer value so I use (int) 
 		gotoXY(1,1);
 		setfgcolor(CYAN);
